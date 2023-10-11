@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+img {
+  max-height: 100%;
+  height: auto;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d4d4d4 #292929;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  border: 3px ridge #292929;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+  color: #e1e1e1;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.15s;
+}
+
+.navbar a:hover {
+  font-weight: 800;
+}
+
+.anchor {
+  position: absolute;
+  top: -20%;
+}
+
+.cover {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #1d1d1d;
+  color: white;
+  overflow: hidden;
+}
+
+.cover .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 70px;
+  margin-right: 100px;
+}
+
+.cover .text h1 {
+  letter-spacing: -5px;
+  font-size: 150px;
+  font-weight: 800;
+}
+
+.cover .text p {
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.cover .text p span {
+  font-size: 30px;
+}
+
+.cover img {
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+
+.sam-berns {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.sam-berns a {
+  color: white;
+  text-decoration: underline;
+  transition: 0.15s;
+}
+
+.sam-berns a:hover {
+  color: #ff134a;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: #292929;
+  color: white;
+}
+
+.about h1 {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.about p {
+  max-width: 900px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.genetics {
+  position: relative;
+  height: 950px;
+  width: 100%;
+  color: #ffffff;
+}
+
+@keyframes hueRotate {
+  0% {
+    filter: hue-rotate(-360deg) brightness(0.4);
+  }
+
+  100% {
+    filter: hue-rotate(360deg) brightness(0.4);
+  }
+}
+
+.genetics .background {
+  height: inherit;
+  width: inherit;
+  background-image: url(./imgs/genetics.jpg);
+  background-position: center;
+  animation: hueRotate 10s linear infinite;
+}
+
+.genetics .content {
+  position: absolute;
+  top: 0;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.genetics .content h1 {
+  font-size: 80px;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.genetics .content .points {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.genetics .content .points .point-left {
+  text-align: left;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.genetics .content .points .point-left h2 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.genetics .content .points .point-left p {
+  font-size: 20px;
+  width: 800px;
+}
+
+.genetics .content .points .point-right {
+  text-align: right;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.genetics .content .points .point-right h2 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.genetics .content .points .point-right p {
+  margin-left: auto;
+  font-size: 20px;
+  width: 800px;
+}
+
+.diagnosing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 70px;
+  padding-block: 100px;
+  background-color: #1d1d1d;
+  color: white;
+}
+
+.diagnosing h1 {
+  text-align: center;
+  margin-top: -30px;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.diagnosing div {
+  margin-top: 50px;
+  font-size: 21px;
+}
+
+.diagnosing div ul {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.symptoms {
+  background-color: #292929;
+  color: white;
+  padding: 50px;
+}
+
+.symptoms h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.symptoms .points {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 23px;
+}
+
+.symptoms .points .point {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 450px;
+  margin-top: 60px;
+}
+
+.symptoms .points .point .content ul {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.symptoms .points .point img {
+  border-radius: 5px;
+}
+
+.incidence {
+  position: relative;
+  height: 600px;
+}
+
+.incidence .background {
+  height: inherit;
+  background-image: url(./imgs/stock-minimal.jpg);
+  filter: brightness(0.3);
+  background-position: center;
+}
+
+.incidence .content {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  margin-inline: 50px;
+  color: white;
+}
+
+.incidence .content h1 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.incidence .content p {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.treatment {
+  background-color: #1d1d1d;
+  color: white;
+  padding-inline: 70px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.treatment h1 {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.treatment p {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.treatment p,
+.treatment ul {
+  font-size: 20px;
+}
+
+.treatment b {
+  color: #ff6464;
+}
+
+.treatment ul {
+  margin-left: 30px;
+  margin-bottom: -30px;
+}
+
+.sources {
+  background-color: #03062b;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sources h1 {
+  font-weight: 900;
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.sources .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sources .link {
+  text-align: center;
+  color: #f268ff;
+  margin-inline: 50px;
+}
+
+.sources .links a {
+  color: #fbccff;
+  font-size: 17px;
+}
